@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Our Happy Clients</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-5">What Our Clients Say</h1>
+        
+        <div class="row">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Client 1">
+                            <div>
+                                <h5 class="card-title mb-0">John Doe</h5>
+                                <small class="text-muted">CEO, Tech Corp</small>
+                            </div>
+                        </div>
+                        <p class="card-text">"Working with this team has been an absolute pleasure. Their attention to detail and commitment to excellence is unmatched."</p>
+                        <div class="text-warning">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Client 2">
+                            <div>
+                                <h5 class="card-title mb-0">Jane Smith</h5>
+                                <small class="text-muted">Marketing Director</small>
+                            </div>
+                        </div>
+                        <p class="card-text">"The results we've achieved together have exceeded our expectations. Their innovative approach and dedication are truly remarkable."</p>
+                        <div class="text-warning">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="https://via.placeholder.com/50" class="rounded-circle me-3" alt="Client 3">
+                            <div>
+                                <h5 class="card-title mb-0">Mike Johnson</h5>
+                                <small class="text-muted">Startup Founder</small>
+                            </div>
+                        </div>
+                        <p class="card-text">"Their expertise and professionalism have been instrumental in our success. I couldn't recommend them more highly."</p>
+                        <div class="text-warning">
+                            ★★★★★
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 

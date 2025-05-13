@@ -1,0 +1,36 @@
+{
+    "pageViews": 1250,
+    "uniqueVisitors": 850,
+    "bounceRate": "32%",
+    "avgTimeOnSite": "4:30",
+    "lastUpdated": "2024-03-20T00:00:00.000Z",
+    "dailyStats": [
+        {
+            "date": "2024-03-20",
+            "views": 450,
+            "visitors": 320
+        },
+        {
+            "date": "2024-03-19",
+            "views": 380,
+            "visitors": 280
+        },
+        {
+            "date": "2024-03-18",
+            "views": 420,
+            "visitors": 250
+        }
+    ],
+    "visitorLogs": [
+        {
+            "timestamp": "2024-03-20T10:30:00.000Z",
+            "page": "/",
+            "duration": "2:15"
+        },
+        {
+            "timestamp": "2024-03-20T11:15:00.000Z",
+            "page": "/services",
+            "duration": "3:45"
+        }
+    ]
+} 

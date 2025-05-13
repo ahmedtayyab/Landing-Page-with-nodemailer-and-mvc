@@ -1,0 +1,41 @@
+/* Custom styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+footer {
+    border-top: 1px solid #dee2e6;
+}
+
+/* Testimonial specific styles */
+.testimonial-card {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.testimonial-card img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.testimonial-card .card-body {
+    padding: 1.5rem;
+}
+
+.testimonial-card .card-text {
+    font-style: italic;
+    color: #6c757d;
+} 

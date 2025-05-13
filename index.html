@@ -92,7 +92,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="index.html">
-                <img src="images/logo.png" alt="Nexivo Tech" height="40">
+                <img src="/images/nexivo.png" alt="Nexivo Tech" height="40">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -116,6 +116,12 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Admin Panel</a>
                     </li>
                 </ul>
                 <div class="ms-3">
@@ -259,6 +265,28 @@
         </div>
     </section>
     
+    <section id="testimonials" class="bg-light text-center">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <div class="text-center mb-3">
+                                <img src="images/client1.jpg" class="rounded-circle mb-2" alt="Client 1" style="width: 100px; height: 100px; object-fit: cover;">
+                                <h5 class="card-title mb-0">John Doe</h5>
+                                <small class="text-muted">CEO, Tech Corp</small>
+                            </div>
+                            <p class="card-text">"Working with this team has been an absolute pleasure. Their attention to detail and commitment to excellence is unmatched."</p>
+                            <div class="text-warning">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more testimonials as needed -->
+            </div>
+        </div>
+    </section>
+    
     <section id="blog" class="bg-light">
         <div class="container">
             <div class="section-title text-center">
@@ -268,7 +296,7 @@
             <div class="row">
                 <div class="col-md-4 mb-4">
                     <div class="card blog-card">
-                        <img src="images/blog1.jpg" class="card-img-top" alt="Blog 1">
+                        <img src="images/future_web.jpg" class="card-img-top" alt="Blog 1">
                         <div class="card-body">
                             <div class="blog-meta mb-2">
                                 <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> March 15, 2024</small>
@@ -276,13 +304,13 @@
                             </div>
                             <h5 class="card-title">The Future of Web Development</h5>
                             <p class="card-text">Explore the latest trends and technologies shaping the future of web development.</p>
-                            <a href="#" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="/blog/web-development.html" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card blog-card">
-                        <img src="images/blog2.jpg" class="card-img-top" alt="Blog 2">
+                        <img src="images/app.jpg" class="card-img-top" alt="Blog 2">
                         <div class="card-body">
                             <div class="blog-meta mb-2">
                                 <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> March 10, 2024</small>
@@ -290,13 +318,13 @@
                             </div>
                             <h5 class="card-title">Mobile App Development Best Practices</h5>
                             <p class="card-text">Learn about the best practices for developing successful mobile applications.</p>
-                            <a href="#" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="/blog/mobile-apps.html" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
                     <div class="card blog-card">
-                        <img src="images/blog3.jpg" class="card-img-top" alt="Blog 3">
+                        <img src="images/cloud.jpg" class="card-img-top" alt="Blog 3">
                         <div class="card-body">
                             <div class="blog-meta mb-2">
                                 <small class="text-muted"><i class="far fa-calendar-alt me-1"></i> March 5, 2024</small>
@@ -304,7 +332,7 @@
                             </div>
                             <h5 class="card-title">Cloud Computing Solutions</h5>
                             <p class="card-text">Discover how cloud computing is transforming business operations.</p>
-                            <a href="#" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            <a href="/blog/cloud-computing.html" class="btn btn-link p-0">Read More <i class="fas fa-arrow-right ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -317,7 +345,7 @@
             <h2>Contact Us</h2>
             <div class="card mt-4">
                 <div class="card-body">
-                    <form action="/contact" method="POST">
+                    <form id="contactForm" class="mt-4">
                         <div class="row">
                             <div class="col-md-6 mb-3">
                                 <label for="name" class="form-label">Your Name</label>
@@ -332,7 +360,8 @@
                             <label for="message" class="form-label">Your Message</label>
                             <textarea class="form-control form-control-sm" id="message" name="message" rows="4" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send</button>
+                        <div id="formAlert" class="alert d-none mb-3"></div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -360,11 +389,12 @@
                 <div class="col-md-4 mb-4">
                     <h5>Newsletter</h5>
                     <p>Subscribe to our newsletter for updates and insights.</p>
-                    <form class="newsletter-form">
+                    <form id="newsletterForm" class="newsletter-form">
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <input type="email" class="form-control" id="newsletterEmail" placeholder="Your Email" required>
                             <button class="btn btn-primary" type="submit">Subscribe</button>
                         </div>
+                        <div id="newsletterAlert" class="alert mt-2 d-none"></div>
                     </form>
                 </div>
             </div>
@@ -400,6 +430,103 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Contact form handling
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formAlert = document.getElementById('formAlert');
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            try {
+                // Disable submit button and show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Sending...';
+                
+                const formData = {
+                    name: document.getElementById('name').value,
+                    email: document.getElementById('email').value,
+                    message: document.getElementById('message').value
+                };
+
+                const response = await fetch('/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Show success message
+                    formAlert.className = 'alert alert-success';
+                    formAlert.textContent = data.message;
+                    // Reset form
+                    this.reset();
+                } else {
+                    // Show error message
+                    formAlert.className = 'alert alert-danger';
+                    formAlert.textContent = data.error || 'Something went wrong. Please try again.';
+                }
+            } catch (error) {
+                // Show error message
+                formAlert.className = 'alert alert-danger';
+                formAlert.textContent = 'Failed to send message. Please try again later.';
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Send Message';
+            }
+        });
+
+        // Newsletter form handling
+        document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formAlert = document.getElementById('newsletterAlert');
+            const submitButton = this.querySelector('button[type="submit"]');
+            const emailInput = document.getElementById('newsletterEmail');
+            
+            try {
+                // Disable submit button and show loading state
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Subscribing...';
+                
+                const response = await fetch('/newsletter/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: emailInput.value
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    // Show success message
+                    formAlert.className = 'alert alert-success mt-2';
+                    formAlert.textContent = data.message;
+                    // Reset form
+                    this.reset();
+                } else {
+                    // Show error message
+                    formAlert.className = 'alert alert-danger mt-2';
+                    formAlert.textContent = data.error || 'Something went wrong. Please try again.';
+                }
+            } catch (error) {
+                // Show error message
+                formAlert.className = 'alert alert-danger mt-2';
+                formAlert.textContent = 'Failed to subscribe. Please try again later.';
+            } finally {
+                // Re-enable submit button
+                submitButton.disabled = false;
+                submitButton.innerHTML = 'Subscribe';
+            }
         });
     </script>
 </body>

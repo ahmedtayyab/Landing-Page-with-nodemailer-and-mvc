@@ -23,6 +23,11 @@ document.getElementById("signupForm").addEventListener("submit", function(event)
     if (!emailRegex.test(email)) {
         document.getElementById("emailError").innerText = "Enter a valid email address.";
         isValid = false;
+    } else {
+        if (!email.toLowerCase().endsWith('.com')) {
+            document.getElementById("emailError").innerText = "Email must end with .com";
+            isValid = false;
+        }
     }
 
     let passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
